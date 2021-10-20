@@ -36,7 +36,7 @@ export function InventoryDetailsPage() {
       }
     };
     getInventory();
-  }, [address]);
+  }, [address, tokenID, type]);
 
   let meta = "";
   try {

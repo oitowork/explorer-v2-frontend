@@ -61,6 +61,7 @@ export function InventoryItem(props: IInventoryItemProps) {
   const description = props.item?.meta?.description || "";
   const { tokenID, ownerAddress } = props.item;
   return (
+    // eslint-disable-next-line jsx-a11y/anchor-is-valid
     <a
       onClick={() =>
         history.push(

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Box, Text, DataChart, Spinner, Tip } from "grommet";
 import { BasePage, TipContent } from "src/components/ui";
 import { formatNumber } from "src/components/ui/utils";

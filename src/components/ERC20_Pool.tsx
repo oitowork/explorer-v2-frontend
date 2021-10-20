@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import  { useEffect } from "react";
 import { getAllERC20 } from "src/api/client";
 import { setERC20Pool, Erc20 } from "src/hooks/ERC20_Pool";
 

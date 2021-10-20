@@ -53,7 +53,7 @@ function AppWithHistory() {
     return () => {
       unlisten();
     };
-  }, []);
+  }, [history]);
 
   document.body.className = themeMode;
 
