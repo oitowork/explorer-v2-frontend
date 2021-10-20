@@ -79,11 +79,13 @@ class VerifyContractBase extends React.Component<
         this.setState({ ...this.state, statusText: "", error: "Error" });
       }
     } catch (e) {
-      this.setState({
-        ...this.state,
-        statusText: "",
-        error: e?.message || "Error",
-      });
+      if (e instanceof Error) {
+        this.setState({
+          ...this.state,
+          statusText: "",
+          error: e?.message || "Error",
+        });
+      }
     } finally {
       this.setState({ ...this.state, isLoading: false });
     }

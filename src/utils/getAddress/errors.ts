@@ -239,10 +239,12 @@ export function checkNormalize(): void {
       throw new Error('broken implementation');
     }
   } catch (error) {
-    throwError('platform missing String.prototype.normalize', UNSUPPORTED_OPERATION, {
-      operation: 'String.prototype.normalize',
-      form: error.message,
-    });
+    if (error instanceof Error) {
+      throwError('platform missing String.prototype.normalize', UNSUPPORTED_OPERATION, {
+        operation: 'String.prototype.normalize',
+        form: error.message,
+      });
+    }
   }
 }
 
